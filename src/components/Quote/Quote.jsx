@@ -1,8 +1,11 @@
-import {quotes} from './quotes';
+import { quotes } from './quotes';
 import styles from './Quote.module.css';
+import { selectRandomQuotes } from './selectRandomQuotes';
 
-export const Quote = () => {
-  const { text, author } = quotes[0];
+const defaultQuote = selectRandomQuotes(quotes);
+
+export const Quote = ({ quote = defaultQuote }) => {
+  const { text, author } = quote;
 
   return (
     <footer className={styles.quote}>

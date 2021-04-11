@@ -1,5 +1,5 @@
 import styles from './App.module.css';
-import { Quote } from './components/Quote/Quote';
+import Quote from './components/Quote';
 
 export function App() {
   return (
